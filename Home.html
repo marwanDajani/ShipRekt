@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>ShipRekt Map</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('/w3images/forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding-8 w3-card-2">
+      <a href="#home" class="w3-margin-left w3-bar-item w3-button"><b>Ship</b>Rekt</a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#projects" class="w3-bar-item w3-button">Map</a>
+        <a href="#about" class="w3-bar-item w3-button">List</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-margin-right">Stall</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Maps stuff -->
+  <div id="map" style="height: 100%; width: 100%;background:white"></div>
+
+  <script>
+  /*function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var myCenter = new google.maps.LatLng(43.647255, -79.390468);
+    var mapOptions = {center: myCenter, zoom: 12};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    google.maps.event.addListener(map,'click',function(event) {
+      placeMarker(map, event.latLng);
+    });
+  }
+
+  function placeMarker(map, location){
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      icon: "wc.png"
+    });
+    var infowindow = new.google.maps.InfoWindow({
+      content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+    });
+    infowindow.open(map, marker);
+  }*/
+
+  function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter=new google.maps.LatLng(43.647255, -79.390468);
+  var mapOptions = {center: myCenter, zoom: 12};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(map, event.latLng);
+  });
+}
+
+function placeMarker(map, location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+    icon: "wc.png"
+  });
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+}
+  
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2ib8OEoyhF8W5xOX6wZ9v2Q-FpLLl63I&callback=myMap"></script>
+
+</body>
+</html>
