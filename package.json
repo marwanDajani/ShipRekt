@@ -1,0 +1,22 @@
+{
+  "name": "shiprekt",
+  "version": "1.0.0",
+  "description": "not really a brick app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marwanDajani/shiprekt.git"
+  },
+  "author": "Marwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marwanDajani/shiprekt/issues"
+  },
+  "homepage": "https://github.com/marwanDajani/shiprekt#readme",
+  "devDependencies": {
+    "surge": "^0.20.1"
+  }
+}
