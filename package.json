@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marwanDajani/shiprekt#readme",
   "devDependencies": {
+    "live-server": "^1.2.1",
     "surge": "^0.20.1"
   }
 }
